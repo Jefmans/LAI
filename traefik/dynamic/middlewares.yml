@@ -1,0 +1,15 @@
+http:
+  middlewares:
+    dashboard-ips:
+      ipAllowList:
+        sourceRange:
+          - 127.0.0.1/32
+          - 10.0.0.0/8
+          - 172.16.0.0/12
+          - 192.168.0.0/16
+          - 94.226.229.43/32   # replace with your public IP
+          
+    dashboard-protect:
+      basicAuth:
+        users:
+          - "admin:$apr1$H6uskkkW$IgXLP6ewTrSuBkTrqE8wj/"
